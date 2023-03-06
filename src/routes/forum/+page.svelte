@@ -4,13 +4,13 @@
 </script>
 
 <article>
-  <h1>Development Updates</h1>
+  <h1>Forum</h1>
   
   <ul>
     {#each data.posts as post}
       <li>
         <h2>
-          <a href={"/devblog/" + post.path}>
+          <a href={"/forum/" + post.path}>
             {post.meta.title}
           </a>
         </h2>

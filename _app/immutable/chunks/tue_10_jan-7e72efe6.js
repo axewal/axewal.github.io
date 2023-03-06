@@ -1,1 +1,0 @@
-import{S as e,i as a,s}from"./index-efcbbb00.js";const l={title:"Tuesday morning",date:"2023-01-10"};class u extends e{constructor(t){super(),a(this,t,null,null,s,{})}}export{u as default,l as metadata};

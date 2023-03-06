@@ -1,5 +1,5 @@
 ---
-title: Post Two
+title: First post
 date: "2022-11-29"
 count: 25
 color: cadetblue

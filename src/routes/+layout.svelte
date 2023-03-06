@@ -16,7 +16,8 @@
 <nav>
   <ul>
     <li><a href="/">Home</a></li>
-    <li><a href="/devlog">Updates</a></li>
+    <li><a href="/devblog">Updates</a></li>
+    <li><a href="/forum">Forum</a></li>
   </ul>
 </nav>
 

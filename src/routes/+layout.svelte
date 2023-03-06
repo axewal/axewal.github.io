@@ -15,8 +15,8 @@
 
 <nav>
   <ul>
-    <li><a href="/">Hem</a></li>
-    <li><a href="/devblog">Blog</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/devlog">Updates</a></li>
   </ul>
 </nav>
 

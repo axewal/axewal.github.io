@@ -1,12 +1,12 @@
 <script>
-  let clicks = 100;
+  let clicks = 0;
   let multiplier = 1;
   let workers = [];
   let worker_multiplier = 1;
 
   let upgrades = [
-    { cost: 15, name: "Doubler", multiplier: 2, worker: 0 },
-    { cost: 5, name: "Worker", multiplier: 0, worker: 1 },
+    { cost: 15, name: "Doubler", multiplier: 2, worker: 0, max: 9, amount: [] },
+    { cost: 5, name: "Worker", multiplier: 0, worker: 1, max: 19, amount: []},
   ];
 
   function increment() {
@@ -22,7 +22,10 @@
         <button
           class="upgrade"
           on:click={() => {
-            if (clicks >= upgrade.cost) {
+            
+            if (clicks >= upgrade.cost && upgrade.amount.length <= upgrade.max) {
+              upgrade.amount[upgrade.amount.length] = upgrade.name
+              console.log(upgrade)
               if (upgrade.multiplier) {
                 multiplier = multiplier * upgrade.multiplier;
                 clicks -= upgrade.cost;
@@ -31,16 +34,22 @@
                 worker_multiplier = worker_multiplier * 2;
                 workers = [upgrade.name, ...workers];
                 /* start "clicking" every 1000 ms */
-                setInterval(increment, 1000);
+                setInterval(increment, 3000);
                 clicks -= upgrade.cost;
+
               }
             } else {
+              if (upgrade.amount.length <= upgrade.max){
               alert("Click some more first!");
+              }
+              else 
+              alert("Max amount reached.")
             }
           }}
         >
           <span>{upgrade.name}</span>
           <span>{upgrade.cost * worker_multiplier}</span>
+          <span>{upgrade.amount.length}</span>
         </button>
       {/each}
     </div>

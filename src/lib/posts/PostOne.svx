@@ -1,88 +1,35 @@
 ---
-title: First post
-date: "2022-11-29"
+title: Post 1
+date: ""
 count: 25
 color: cadetblue
-list: [1, 2, 3, 4, "boo"]
+ToDo: [
+
+	Effekter på klick,
+	sprites istället för rektanglar
+
+
+]
 ---
 
-<script>
-	import Boinger from './2/Boinger.svelte';
-	import Section from './2/Section.svx';
-	import Count from './2/Count.svelte';
-    import Seriously from './2/Seriously.svelte';
 
-	let number = 45;
-</script>
 
-```ts
-import type { PageLoad } from "./$types";
+## Ändringar
 
-export const load: PageLoad = async ({fetch}) => {
-	const response = await fetch(`/api/posts`);
-	const posts = await response.json();
+** Ändring 1	:	Max och array  **
+> Jag har lagt till en maximum för hur många upgrades som man kan ha, och för att kunna se hur många som användes så gjorde jag en ny variabel i upgrades som hade en tom array i sig. Anledningen till att jag använde array och inte ```antal += 1``` var för att med en array så är det enklare att implementera nya "features" för den upgraden när jag har en lista över alla som finns. En anna anledning till att jag har arrays är för att det är mer verifierat eftersom det är objekt som finns istället för att göra separat matte som kan enkelt bli uttnytjad.
 
-	return {
-	posts,
-	};
-};
-```
+** Ändring 2	:	**
 
-## Good stuff in your markdown
-
-Markdown is pretty good but sometimes you just need more.
-
-Sometimes you need a boinger like this:
-
-<Boinger color="{ color }"/>
-
-Not many people have a boinger right in their markdown.
-
-## Markdown in your markdown
-
-Sometimes what you wrote last week is so good that you just *have* to include it again.
-
-I'm not gonna stand in the way of your egomania.
->
-><Section />
-> <Count />
->
->— *Me, May 2019*
-
-Yeah, thats right you can put wigdets in markdown (`.svx` files or otherwise). You can put markdown in widgets too.
-
-<Seriously>
-
-### I wasn't joking
-
-```
-	This is real life
-```
-
----
-## Hej lisa!    
-
-<Count/>
-
-</Seriously>
-
-Sometimes you need your widgets **inlined** (like this:<Count count="{number}"/>) because why shouldn't you.
-Obviously you have access to values defined in YAML (namespaced under `metadata`) and anything defined in an fenced `js exec` block can be referenced directly.
-
-Normal markdown stuff works too:
-
-| like  | this |
-|-------|------|
-| table | here |
-
-And *this* and **THIS**. And other stuff. You can also use all your favorite Svelte features, like `each` blocks:
+## Saker att göra
 
 <ul>
-{#each list as item}
+{#each ToDo as item}
   <li>{item}</li>
 {/each}
 </ul>
 
-and all the other good Svelte stuff.
 
+
+## 
 

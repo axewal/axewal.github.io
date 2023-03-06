@@ -14,7 +14,7 @@
             {post.meta.title}
           </a>
         </h2>
-        Published {post.meta.date}
+        {post.meta.date}
       </li>
     {/each}
   </ul>

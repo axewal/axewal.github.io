@@ -2,12 +2,12 @@
   // @ts-nocheck
   export let user;
   export let date;
-  export let message;
+  export let thread_message;
 </script>
 
 <article>
   <h1>{user}</h1>
-  <p>{message}</p>
+  <p>{thread_message}</p>
   <p>{date}</p>
 
   <slot />

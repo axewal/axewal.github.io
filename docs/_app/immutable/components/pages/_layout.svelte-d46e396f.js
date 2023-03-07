@@ -1,4 +1,4 @@
-import{S as j,i as w,s as z,C as J,k as n,q as F,a as H,D as P,l as r,m as c,r as G,h as t,c as N,n as $,E as a,b,F as Q,G as W,H as X,f as Z,t as x}from"../../chunks/index-efcbbb00.js";function ee(m){let i,u,y,_,o,h,g,d,S,q,L,v,B,A,f,C,D,p,E;const M=m[1].default,l=J(M,m,m[0],null);return{c(){i=n("link"),u=n("style"),y=F(`nav {
+import{S as j,i as w,s as z,C as J,k as n,q as F,a as H,D as P,l as r,m as c,r as G,h as t,c as N,n as $,E as a,b,F as Q,G as W,H as X,f as Z,t as x}from"../../chunks/index-aca39e59.js";function ee(m){let i,u,y,_,o,h,g,d,S,q,L,v,B,A,f,C,D,p,E;const M=m[1].default,l=J(M,m,m[0],null);return{c(){i=n("link"),u=n("style"),y=F(`nav {
       margin-left: 10%;
       margin-right: 10%;
     }`),_=H(),o=n("nav"),h=n("ul"),g=n("li"),d=n("a"),S=F("Hem"),q=H(),L=n("li"),v=n("a"),B=F("Blog"),A=H(),f=n("main"),C=n("hr"),D=H(),p=n("main"),l&&l.c(),this.h()},l(e){const s=P("svelte-1lc4dl3",document.head);i=r(s,"LINK",{rel:!0,href:!0}),u=r(s,"STYLE",{});var K=c(u);y=G(K,`nav {

@@ -16,7 +16,16 @@ const config = {
 		extensions: ['.md', '.svx'],
 		layout: { blog: './src/routes/devblog/post.svelte' },
 	})],
-
+	vitePlugin: {
+		experimental: {
+			inspector: {
+				toggleKeyCombo: 'meta-shift',
+				holdMode: true,
+				showToggleButton: 'always',
+				toggleButtonPos: 'bottom-right'
+			}
+		}
+	},
 	kit: {
 		adapter: adapter({
 			pages: 'docs',

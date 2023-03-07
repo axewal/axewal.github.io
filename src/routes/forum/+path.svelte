@@ -1,11 +1,22 @@
-<!-- src/routes/forum/[path]/+page.svelte -->
 <script>
     /** @type {import('./$types').PageData} */
     export let data;
   </script>
   
   <article>
-    <h1>{data.title}</h1>
-    <svelte:component this={data.content} />
+    <h1>Development Updates</h1>
+    
+    <ul>
+      {#each data.posts as post}
+        <li>
+          <h2>
+            <a href={"/forum/" + post.path}>
+              {post.meta.title}
+            </a>
+          </h2>
+          Published {post.meta.date}
+        </li>
+      {/each}
+    </ul>
   </article>
   

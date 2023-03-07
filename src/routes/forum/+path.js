@@ -1,14 +1,13 @@
+
+
+
 /** @type {import('./$types').PageLoad} */
-export async function load({ params }) {
-    const post = await import(`../../../lib/posts/mess/${params.path}.svx`);
-  
-    const { title, date } = post.metadata;
-    const content = post.default;
-  
+export async function load({ fetch }) {
+    const response = await fetch(`/api/posts`);
+    const posts = await response.json();
+    
     return {
-      content,
-      title,
-      date,
+      posts,
     };
   };
   
